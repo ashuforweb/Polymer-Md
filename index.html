@@ -12,6 +12,8 @@
   <link rel="import" href="bower_components/iron-icons/iron-icons.html">
   <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
   <link rel="import" href="bower_components/paper-input/paper-input.html">
+  <link rel="import" href="bower_components/paper-input-container/paper-input-container.html">
+  <link rel="import" href="bower_components/paper-slider/paper-slider.html">
 </head>
 
 <body>
@@ -19,7 +21,13 @@
   <paper-checkbox checked>Hindi</paper-checkbox>
   <paper-fab icon="favorite"></paper-fab>
   <paper-icon-button icon="menu"></paper-icon-button>
-  <paper-input label="First Name"></paper-input>
+  <paper-input char-counter label="First Name"></paper-input>
+  <paper-slider min="10" max="200" value="110"></paper-slider>
+  <paper-input-container id="test">
+    <label>First Name</label>
+    <input is="iron-input">
+  </paper--container>
+
 </body>
 
 </html>
