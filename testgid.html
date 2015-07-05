@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style media="screen">
+    #fname{
+      width: 200px;
+    }
+    #fdiv{
+      width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>Test Get Element Id</title>
+  <link rel="icon" href="images/p-logo-32.png" type="image/png">
+  <link rel="import" href="bower_components/paper-input/paper-input.html">
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+</head>
+
+<body>
+  <div id="fdiv">
+    <paper-input label="First Name" id="fname"></paper-input>
+    <paper-button raised id="pbutton">Search</paper-button>
+  </div>
+</body>
+<script type="text/javascript">
+  document.getElementById('pbutton').addEventListener('click', function(e) {
+    console.log("This is testing of id" + document.getElementById('fname').value);
+  });
+</script>
+
+</html>
