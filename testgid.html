@@ -11,12 +11,18 @@
       width: 500px;
       margin: 0 auto;
     }
-    #pbutton{
+
+    #pbutton {
       background: green;
       color: yellow;
     }
-    #pbutton::shadow paper-ripple{
-      color:red;
+
+    #pbutton::shadow paper-ripple {
+      color: red;
+    }
+
+    #pcheck::checked {
+      color: red;
     }
   </style>
   <meta charset="utf-8">
@@ -28,13 +34,14 @@
   <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
   <link rel="import" href="bower_components/neon-animation/animations/scale-up-animation.html">
   <link rel="import" href="bower_components/neon-animation/animations/fade-out-animation.html">
-
+  <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
 </head>
 
 <body>
   <div id="fdiv">
     <paper-input label="First Name" id="fname"></paper-input>
     <paper-button raised id="pbutton">Search</paper-button>
+    <paper-checkbox checked id="pcheck">Is this is cool</paper-checkbox>
   </div>
   <paper-dialog>
     <h2>Header</h2>
@@ -44,8 +51,10 @@
     <div class="buttons">
       <paper-button dialog-dismiss>Cancel</paper-button>
       <paper-button dialog-confirm>Accept</paper-button>
+
     </div>
   </paper-dialog>
+
 </body>
 <script type="text/javascript">
   document.getElementById('pbutton').addEventListener('click', function(e) {
