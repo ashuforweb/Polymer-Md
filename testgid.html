@@ -24,6 +24,16 @@
     #pcheck {
       color: red;
     }
+
+    #pbut {
+      background: #B90000;
+      color: #FFFFFF;
+    }
+
+    #pdia {
+      width: 500px;
+      
+    }
   </style>
   <meta charset="utf-8">
   <title>Test Get Element Id</title>
@@ -32,6 +42,7 @@
   <link rel="import" href="bower_components/paper-button/paper-button.html">
   <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
   <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+  <link rel="import" href="bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
   <link rel="import" href="bower_components/neon-animation/animations/scale-up-animation.html">
   <link rel="import" href="bower_components/neon-animation/animations/fade-out-animation.html">
   <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
@@ -41,13 +52,46 @@
   <div id="fdiv">
     <paper-input label="First Name" id="fname"></paper-input>
     <paper-button raised id="pbutton">Search</paper-button>
-    <paper-checkbox checked id="pcheck" >Hello</paper-checkbox>
+    <div style="height:30px;">
+
+    </div>
+    <paper-checkbox checked id="pcheck">Hello</paper-checkbox>
+    <div style="height:30px;">
+
+    </div>
+    <paper-button raised id="pbut">Raise the Hell</paper-button>
   </div>
 
+
+  <paper-dialog id="pdia">
+    <h2>Header</h2>
+    <paper-dialog-scrollable>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+      qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </paper-dialog-scrollable>
+    <div class="buttons">
+      <paper-button id="pdiacan">OK</paper-button>
+    </div>
+  </paper-dialog>
 </body>
 <script type="text/javascript">
   document.getElementById('pbutton').addEventListener('click', function(e) {
     console.log("This is testing of id " + document.getElementById('fname').value);
+  });
+  document.getElementById('pbut').addEventListener('click', function(e) {
+    document.getElementById('pdia').toggle();
+  });
+  document.getElementById('pdiacan').addEventListener('click', function(e) {
+    document.getElementById('pdia').toggle();
   });
 </script>
 
