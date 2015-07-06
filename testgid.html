@@ -3,10 +3,11 @@
 
 <head>
   <style media="screen">
-    #fname{
+    #fname {
       width: 200px;
     }
-    #fdiv{
+
+    #fdiv {
       width: 500px;
       margin: 0 auto;
     }
@@ -17,6 +18,10 @@
   <link rel="import" href="bower_components/paper-input/paper-input.html">
   <link rel="import" href="bower_components/paper-button/paper-button.html">
   <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
+  <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+  <link rel="import" href="bower_components/neon-animation/animations/scale-up-animation.html">
+  <link rel="import" href="bower_components/neon-animation/animations/fade-out-animation.html">
+
 </head>
 
 <body>
@@ -24,10 +29,20 @@
     <paper-input label="First Name" id="fname"></paper-input>
     <paper-button raised id="pbutton">Search</paper-button>
   </div>
+  <paper-dialog>
+    <h2>Header</h2>
+    <paper-dialog-scrollable>
+      Lorem ipsum...
+    </paper-dialog-scrollable>
+    <div class="buttons">
+      <paper-button dialog-dismiss>Cancel</paper-button>
+      <paper-button dialog-confirm>Accept</paper-button>
+    </div>
+  </paper-dialog>
 </body>
 <script type="text/javascript">
   document.getElementById('pbutton').addEventListener('click', function(e) {
-    console.log("This is testing of id" + document.getElementById('fname').value);
+    console.log("This is testing of id " + document.getElementById('fname').value);
   });
 </script>
 
